@@ -9,7 +9,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    godotImage = docker.build("seppli11/python-for-burndown-chart-docker", ".")
+                    image = docker.build("seppli11/python-for-burndown-chart-docker", ".")
                 }
             }
         }
