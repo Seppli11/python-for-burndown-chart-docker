@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry( registry, registryCredential ) {
-                        image.push()
+                        image.push("latest")
                     }
                 }
             }
