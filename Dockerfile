@@ -8,3 +8,5 @@ RUN apt-get update && apt-get install -y make gcc build-essential && rm -rf /var
 RUN useradd --system --create-home --home-dir /home/jenkins --shell /bin/bash --gid root --groups sudo --uid 1000 jenkins
 USER jenkins
 WORKDIR /home/jenkins
+
+RUN pip install -r requirements.txt
