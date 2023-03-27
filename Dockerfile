@@ -9,4 +9,5 @@ RUN useradd --system --create-home --home-dir /home/jenkins --shell /bin/bash --
 USER jenkins
 WORKDIR /home/jenkins
 
+COPY ./requirements.txt ~/requirements.txt
 RUN pip install -r requirements.txt
